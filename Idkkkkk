@@ -482,21 +482,26 @@ end
 local function CreateGradient(parent)
     local g = Instance.new("UIGradient", parent)
     g.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 0, 0)),
-        ColorSequenceKeypoint.new(0.45, Color3.fromRGB(0, 0, 0)),
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(15, 15, 15)),
+        ColorSequenceKeypoint.new(0.25, Color3.fromRGB(15, 15, 15)),  
+        ColorSequenceKeypoint.new(0.4, Color3.fromRGB(150, 150, 150)),
         ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 255, 255)),
-        ColorSequenceKeypoint.new(0.55, Color3.fromRGB(0, 0, 0)),
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 0, 0))
+        ColorSequenceKeypoint.new(0.6, Color3.fromRGB(150, 150, 150)),
+        ColorSequenceKeypoint.new(0.75, Color3.fromRGB(15, 15, 15)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(15, 15, 15))
     })
     g.Rotation = 45
-    
     task.spawn(function()
         local offset = -1.5
         while game:GetService("RunService").RenderStepped:Wait() do
             if not g.Parent then break end
-            offset = offset + 0.02
+            offset = offset + 0.012
             if offset > 1.5 then offset = -1.5 end
             g.Offset = Vector2.new(offset, 0)
+            if parent:IsA("UIStroke") then
+                local pulse = (math.sin(tick() * 3.5) + 1) / 2
+                parent.Transparency = 0.0 + (pulse * 0.5)
+            end
         end
     end)
     return g
