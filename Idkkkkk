@@ -106,22 +106,22 @@ local Config = {
 }
 
 local COLORS = {
-    Background             = Color3.fromRGB(10, 10, 10),
+    Background             = Color3.fromRGB(0, 0, 0),
     BackgroundTransparency = 0.05,
-    Surface                = Color3.fromRGB(18, 18, 18),
-    SurfaceTransparency    = 0.10,
+    Surface                = Color3.fromRGB(15, 15, 15),
+    SurfaceTransparency    = 0.1,
     Text    = Color3.fromRGB(255, 255, 255),
-    TextDim = Color3.fromRGB(150, 150, 150),
-    Accent  = Color3.fromRGB(0, 255, 255),
-    Purple  = Color3.fromRGB(0, 255, 255),
+    TextDim = Color3.fromRGB(160, 160, 160),
+    Accent  = Color3.fromRGB(255, 255, 255),
+    Purple  = Color3.fromRGB(200, 200, 200),
     Pink    = Color3.fromRGB(255, 255, 255),
-    Cyan    = Color3.fromRGB(0, 255, 255),
-    Yellow  = Color3.fromRGB(255, 255, 255),
-    Blue    = Color3.fromRGB(0, 255, 255),
-    Red     = Color3.fromRGB(255, 0, 128),
-    Success = Color3.fromRGB(0, 255, 255),
-    Warning = Color3.fromRGB(255, 0, 128),
-    Error   = Color3.fromRGB(255, 0, 128),
+    Cyan    = Color3.fromRGB(255, 255, 255),
+    Yellow  = Color3.fromRGB(180, 180, 180),
+    Blue    = Color3.fromRGB(255, 255, 255),
+    Red     = Color3.fromRGB(255, 255, 255),
+    Success = Color3.fromRGB(255, 255, 255),
+    Warning = Color3.fromRGB(120, 120, 120),
+    Error   = Color3.fromRGB(255, 255, 255),
 }
 
 -- Desync flags
